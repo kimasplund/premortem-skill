@@ -39,7 +39,8 @@ For best results, include the concrete actions, timeline, budget/resources, what
 
 ## Example output
 
-[examples/premortem-newsletter-example.md](examples/premortem-newsletter-example.md) — a full five-stage premortem on a paid local-newsletter plan, showing the report structure end to end: the funnel arithmetic caught as the top failure mode, the compound failure narration, the adversary kill chain, and dated tripwires.
+- [examples/deployboard-premortem.md](examples/deployboard-premortem.md) — the skill at full scale: a solo founder's SaaS launch with a quit-your-job gate. Shows the funnel arithmetic caught as the top failure mode, an IP-assignment mode with no warning sign picked as most dangerous, the compound "zombie plan" scenario, a seeded competitor's dated kill chain, and a kill condition with pre-written tripwire responses.
+- [examples/premortem-newsletter-example.md](examples/premortem-newsletter-example.md) — a compact run on a smaller plan (paid local newsletter), showing how the format scales down without padding.
 
 ## Provenance
 
