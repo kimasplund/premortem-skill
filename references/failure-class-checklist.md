@@ -1,6 +1,6 @@
 # Failure classes and pre-delivery checklist
 
-Load this when generating failure modes (Step 2) and again before delivering. The generation pass and this checklist stay backstage — only the one-line cut log appears in the report.
+Load this when generating failure modes and again before delivering. The generation pass and this checklist stay backstage — only the one-line cut log appears in the report.
 
 ## Part 1 — Failure classes (generation checklist)
 
@@ -13,11 +13,17 @@ Generate at least one candidate per class, or write an explicit "N/A — [reason
 | Delivery / execution & capacity | Who does the work, in which hours, once admin and overhead are priced in? |
 | Pricing / unit economics | Does the price survive contact with real scope, real costs, real conversion? |
 | Legal / contractual | What did they sign (or their counterparties sign) that they haven't read? |
-| Concentration / dependency | What single client, channel, platform, or person carries more weight than it should? |
+| Concentration / dependency | What single client, channel, platform, or person carries more weight than it should? Is the fallback available right now, at known cost, with confirmed capacity — or only theoretically? |
 | External actors | Who with their own agenda — competitor, vendor, employer, regulator — can move first? |
 | Human / psychological | Which motivation, stamina, or conflict cost is being spent but not budgeted? |
-| Timing / sequencing | What is scheduled to happen before its prerequisite can plausibly complete? |
+| Timing / sequencing | What is scheduled to happen before its prerequisite can plausibly complete? Treat formal approvals and any dependency with a lead time over two weeks as 2–3× the stated timeline until evidence says otherwise — and confirm each is initiated or contracted, not merely assumed. What season does the launch or ramp land in — is that the demand trough rather than the peak? Name the ramp months and which direction category demand moves in each: a traffic peak can be a category trough (a spring opening ramps into iced-drink season, not hot-coffee season) — check category demand by month, not traffic vibes. |
 | Unknown / omission | What did the plan never price, never staff, never schedule, never mention? |
+| Sustainment / drift | What decays at month 8+ when attention ends — content, integrations, relationships, the founder's own engagement? |
+| Incentives / politics | Who benefits if this proceeds unexamined? Who absorbs the downside? Are the success metrics defined by the beneficiaries? Was dissent heard or managed? |
+
+**Elephant probe (under Human/psychological):** what are they pretending isn't a problem — the premise they're emotionally invested in, the work they're avoiding because it's boring or frightening, the doubt they won't verbalize? Answer with plan-level evidence only — what's unstaffed, unscheduled, unsaid — never a personality diagnosis.
+
+**Boring-failure floor.** At least two surviving modes must be mundane base-rate killers — key-person loss, an unbudgeted ~40% timeline slip, shipped-but-invisible, motivation decay in months 2–4, bandwidth eaten by an unrelated event. Base rates kill more plans than plot twists. The floor applies to survivors, not candidates, and the diversity test still governs: two mundane modes must differ from each other like any other pair. A mundane mode that genuinely is the omission or success-kills slot counts for both.
 
 **Personal-decision variants:** for career/relocation/family plans, read *legal/contractual* as paperwork and contingencies (clawbacks, leases, custody, insurance) and *market/demand* as fit (does the new role, city, or school actually suit the people involved).
 
@@ -41,8 +47,13 @@ Each surviving mode must differ from every other in at least **2** of:
 
 **Stop rule:** stop generating when two consecutive candidates fold into existing modes.
 
-**Cut-log format (the only visible trace):** one line under the autopsy —
+**Existing-guard check.** Before a candidate earns a rung, name the guard the plan already has against it — or "none." An adequate guard demotes the mode to the paper-tiger register with the guard cited. An inadequate guard joins the failure narrative: why it fails. Never rank a risk the plan has already closed.
+
+**Evidence tags (backstage).** Tag each surviving candidate: context-backed (the plan's own details confirm it), needs-verification (probable, but needs domain data), or pattern-assumption (built from the reference class alone). Every surviving mode tagged needs-verification must appear as a pre-launch checklist item. Don't drop pattern-assumption modes preferentially — they are often the most valuable. The tags never appear in the report.
+
+**Cut-log format (the only visible trace):** one line under the autopsy, duplicates only —
 `**Considered and cut:** X (folded into #3), Y (<2%, recoverable).`
+Modes downgraded because an existing guard holds go to the paper-tiger table instead (≤3 rows: mode, guard that holds it down, signal that re-upgrades it) — no mode appears in both.
 
 **Commitment grades** — grade the commitment you actually hold from each person the plan depends on, not the one narrated:
 
@@ -61,17 +72,24 @@ Anything below Endorse is a failure mode or a pre-launch checklist item: convert
 
 Run against the finished report. Fix what fails; do not ship a report that fails a line.
 
+**Sycophancy rewrite-test (item 15's procedure):** rewrite the single most diplomatically worded failure mode with every politeness filter removed. If the rewrite reads materially harsher, sycophancy was active — ship the hard version. Harsh means forensic, never insulting; past-tense register preserved; the numbers don't move, only the wording. Runs after generation, never before — don't filter before you think.
+
 1. Every cause passes the stranger-paste test (couldn't be pasted into a stranger's premortem unchanged).
 2. Steelman present; a genuine advocate would recognize their own case in it.
 3. All entries past tense from the future; each month caused by the prior month.
 4. No causal chain shipped with a known weak link (~60% plausibility floor per link).
-5. Percentages on the coarse ladder (~5/~10/~15/~20/~30/~40), each with a justification clause; shares-of-failure note present; sums to ~100; top mode ≤ ~40%.
-6. Top two modes carry a reference-class anchor plus a disanalogy line.
-7. At least 1 omission mode, 1 success-kills mode, 1 frame-blind slot, 1 compound mode.
-8. Diversity test passed (Part 2); cut log present.
+5. Percentages on the coarse ladder (~5/~10/~15/~20/~30/~40), each with a justification clause; shares-of-failure note present; sums to ~100; top mode ≤ ~40%; the ranking is strictly the probability order; every tie has a written break covering all tied pairs — verified by enumeration, never recall: list every adjacent pair in the ranking; each pair is either strictly descending or is the single allowed tie with its written break naming both modes; a second tie anywhere means merge or re-ladder before shipping; out-of-order placement fails; every quoted statistic carries source × year × failure definition or an inline "weakly sourced" mark.
+6. Top two modes carry a reference-class anchor plus a disanalogy line; the user's Step-1 reference class anchors when offered.
+7. At least 1 omission mode, 1 success-kills mode, 1 frame-blind slot, 1 compound mode, and ≥2 mundane base-rate survivors — or a stated N/A with reason; genuine overlaps count once.
+8. Diversity test passed (Part 2); cut log present (duplicates only); existing-guard check run — every survivor named its guard or "none"; paper-tiger table ≤3 rows, each with guard + re-upgrade signal.
 9. I×F table consistent with the most-likely / most-dangerous picks; any divergence explained in prose.
-10. Hidden assumption found by convergence, or convergence explicitly stated as absent.
-11. Every rebuild change names the mode it closes + its cost; decision rule present for any irreversible step; residual risk stated.
-12. Adversary profiled (motivation / resources / constraints / best alternative); kill chain dated and sequenced; each move has a detection opportunity.
-13. Every tripwire: metric + threshold + check date anchored to their timeline + if-tripped action; adversary rows present; most-dangerous mode has an early-chain tripwire; kill condition is a combination, not a single signal.
-14. No reassurance paragraph anywhere; stages 1 and 2 stay forensic.
+10. Hidden assumption found by convergence, or convergence explicitly stated as absent; the most-certain assumption was attacked first — and survived only with its evidence stated.
+11. Every rebuild change names the mode it closes + its cost + its urgency tier; Launch-Blocking changes carry decision dates; proportionality check passed or over-spend justified; most-dangerous modes labeled prevent/limit/accept; at most one consciously-accepted mode, cost priced; decision rule present for any irreversible step; residual risk stated.
+12. Pre-launch checklist: every item has what/how/walk-away; items gating the top 2–3 assumptions carry falsifiers; every needs-verification mode appears as a checklist item.
+13. Adversary profiled (motivation / resources / constraints / best alternative); kill chain dated and sequenced; each move has a detection opportunity.
+14. Every tripwire: metric + threshold + check date anchored to their timeline + if-tripped action; adversary rows present; most-dangerous mode has an early-chain tripwire; kill condition is a combination, not a single signal; paper-tiger re-upgrade signals wired as Track-tier rows; calibration-review line present with the horizon date.
+15. No reassurance paragraph anywhere; the autopsy and the verdict stay forensic; rewrite-test run on the most diplomatic mode (harsher rewrite shipped, wording-only); requested brutality treated as tone pressure, not evidence; reverse autopsy present only on a negative decision-rule landing, ≤4 lines, resolving into an ELSE branch or "the caution stands."
+16. Gap check names one underexplored category and why this frame under-weights it — a reason, not a label.
+17. Length discipline: no backstage machinery visible (tags, class names, generation counts); conditional blocks fired only on their triggers; paper-tiger cap and reverse-autopsy cap respected; budgets respected (modes/tables/rows within caps); length within the stated band for the plan's complexity; report length proportional to the plan's complexity.
+18. Proportionality applied: a trivial, reversible, low-stakes plan got the short deflated answer, not the ceremony. When the full report ran, the screen left no trace on the page — at most one plan-framing sentence about the stakes; any line naming the screen, its outcome, or why the full treatment ran fails this item.
+19. Mechanical leak scan — a literal text search over the finished report, never from memory. Search (case-insensitive) for: "stage", "step", "section", or "phase" adjacent to a number or used to cross-reference a part of the report; and "screen", "gate", or "checklist" used as the name of this method's machinery rather than as ordinary content words. Every hit is rewritten to name the content ("the autopsy", "the rebuild", "the tripwires table") or deleted; ship only at zero unrewritten hits. The urgency tier labels (Launch-Blocking / Fast-Follow / Track) are content, not machinery — they stay.
